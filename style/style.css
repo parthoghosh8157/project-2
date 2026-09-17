@@ -25,7 +25,7 @@
 .btn-primary{
     background-color:#FF900E;
     color: #fff;
-    Padding: 20px 25px;
+    padding: 20px 25px;
     font-weight: 600;
     font-size: 1.25rem;
     border-radius: 8px;
@@ -37,6 +37,16 @@ main{
 }
 main > section{
     margin-top: 6rem;
+}
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 /* header style */
 /* navbar style*/
@@ -95,7 +105,47 @@ main > section{
 #quick-list{
     font-weight: 500;
 }
-
+.facts{
+    margin-bottom: 12rem;
+}
+.fact-container{
+    max-width: 33rem;
+}
+.fact-carts-container{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 124px;
+    margin-top: 100px;
+}
+.fact-cart{
+    display: flex;
+    width: 240px;
+    height: 240px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 46px 36px 60px 36px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+}
+/* .fact-cart:hover{
+    background-color: #cfb18e;
+    color: #000000;
+} */
+.fact-cart>div{
+    text-align: center;
+}
+.fact-cart>div h3{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.fact-cart>div p{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
 /* responsive styles */
 @media screen and (max-width: 576px) {
     .navbar,
@@ -122,6 +172,20 @@ main > section{
     .our-features{
         margin-left: 2rem;
     }
+    .facts{
+        margin-bottom: 3rem;
+
+    }
+    .fact-carts-container{
+        grid-template-columns:repeat(1,1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    .fact-cart{
+        width: 180px;
+        height: 180px;
+        padding: 26px 16px 40px 16px;
+    }
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
     .teams{
@@ -133,5 +197,17 @@ main > section{
     .our-features{
         margin: 1rem 2rem;
     }
-    
+    .facts{
+        margin-bottom: 6rem;
+    }
+    .fact-carts-container{
+        grid-template-columns:repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    .fact-cart{
+        width: 180px;
+        height: 180px;
+        padding: 36px 26px 50px 26px;
+    }
 }
